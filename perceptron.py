@@ -41,11 +41,14 @@ class Learner:
 #        for data in self.dataset:
 #            data.show()
 
-    def train(self, repetitions):
-        for i in range(repetitions):
+    def train(self):
+        total_error = 1
+        while total_error > 0:
+            total_error = 0
             for example in self.dataset:
-                neuron = Neuron(example.inputs, self.weights, self.bias)  # 1 is the bias
+                neuron = Neuron(example.inputs, self.weights, self.bias)
                 result = neuron.compute_inputs()
+                total_error += abs(example.output - result)
                 #  self.show_details()
                 self.update_weights(example=example, actual=result)
 
