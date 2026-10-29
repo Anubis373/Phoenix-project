@@ -1,8 +1,7 @@
 from typing import TypeVar, Generic
-from collections.abc import Iterable
 
 # 1. Déclarer la variable de type
-T = TypeVar('T', Iterable)
+T = TypeVar('T')
 
 class Data(Generic [T]): 
     inputs: list[T]
