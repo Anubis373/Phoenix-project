@@ -1,4 +1,9 @@
-class Data[T]: 
+from typing import TypeVar, Generic
+
+# 1. Déclarer la variable de type
+T = TypeVar('T')
+
+class Data(Generic [T]): 
     inputs: list[T]
     output: T
     def __init__(self , inputs, output):
