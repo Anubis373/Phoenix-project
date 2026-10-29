@@ -20,5 +20,10 @@ class Data(Generic [T]):
     
     def show(self): 
         for elmts in self.inputs:
+<<<<<<< HEAD
             print(elmts.tostring() + ", ")
         print(self.output.tostring())
+=======
+            print(str(elmts) + ", ")
+        print(str(self.output))
+>>>>>>> 170ee85 (fix)
