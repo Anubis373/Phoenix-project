@@ -11,5 +11,5 @@ class Data(Generic [T]):
         self.inputs = inputs
         self.output = output
         
-    def length():
-        return len(input)
+    def length(self):
+        return len(self.inputs)
