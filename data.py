@@ -15,5 +15,5 @@ class Data(Generic [T]):
     
     def show(self): 
         for elmts in self.inputs:
-            print(elmts.tostring() ++ ", ")
+            print(elmts.tostring() + ", ")
         print(self.output.tostring())
