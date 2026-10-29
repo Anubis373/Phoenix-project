@@ -12,3 +12,8 @@ class Data(Generic [T]):
         
     def length(self):
         return len(self.inputs)
+    
+    def show(self): 
+        for elmts in self.inputs:
+            print(elmts.tostring() ++ ", ")
+        print(self.output.tostring())
