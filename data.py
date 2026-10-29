@@ -1,7 +1,8 @@
 from typing import TypeVar, Generic
+from collections.abc import Iterable
 
 # 1. Déclarer la variable de type
-T = TypeVar('T')
+T = TypeVar('T', Iterable)
 
 class Data(Generic [T]): 
     inputs: list[T]
@@ -9,3 +10,6 @@ class Data(Generic [T]):
     def __init__(self , inputs, output):
         self.inputs = inputs
         self.output = output
+        
+    def length():
+        return len(input)
