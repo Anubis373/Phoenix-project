@@ -52,7 +52,7 @@ class Learner:
                 #  self.show_details()
                 self.update_weights(example=example, actual=result)
 
-    def update_weights(self, example:Data, actual):
+    def update_weights(self, example: Data, actual):
         for i in range(len(self.weights)):
             self.weights[i] += self.learning_rate * (example.output - actual) * example.inputs[i]
             self.bias += self.learning_rate * (example.output - actual)
