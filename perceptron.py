@@ -1,4 +1,6 @@
 from data import Data
+
+
 class Neuron:
     output: float
     inputs: list
